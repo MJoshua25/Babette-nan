@@ -1,3 +1,4 @@
+{% %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,12 +7,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <meta name="description" content="Babette">
-  <link href="assets/images/favicon/favicon.png" rel="icon">
+  <link href="{%static 'assets/images/favicon/favicon.png' %}" rel="icon">
   <title>Babette</title>
   <link rel="stylesheet"
     href="https://fonts.googleapis.com/css?family=Rubik:400,500,700%7cShadows+Into+Light&display=swap">
-  <link rel="stylesheet" href="assets/css/libraries.css" />
-  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="{%static 'assets/css/libraries.css' %}" />
+  <link rel="stylesheet" href="{%static 'assets/css/style.css' %}" />
 </head>
 
 <body>
@@ -23,8 +24,8 @@
       <nav class="navbar navbar-expand-lg sticky-navbar">
         <div class="container">
           <a class="navbar-brand" href="index.html">
-            <img src="assets/images/logo/logo-light.png" class="logo-light" alt="logo">
-            <img src="assets/images/logo/logo-dark.png" class="logo-dark" alt="logo">
+            <img src="{%static 'assets/images/logo/logo-light.png' %}" class="logo-light" alt="logo">
+            <img src="{%static 'assets/images/logo/logo-dark.png' %}" class="logo-dark" alt="logo">
           </a>
           <button class="navbar-toggler" type="button">
             <span class="menu-lines"><span></span></span>
@@ -132,7 +133,7 @@
               <div class="cart-popup">
                 <ul class="list-unstyled">
                   <li class="cart-item">
-                    <div class="cart__item-img"><img src="assets/images/shop/thumbs/1.png" alt="thumb"></div>
+                    <div class="cart__item-img"><img src="{%static 'assets/images/shop/thumbs/1.png' %}" alt="thumb"></div>
                     <div class="cart__item-content">
                       <h6 class="cart__item-title">Roast Sea Trout</h6>
                       <div class="cart__item-detail">$ 38.00</div>
@@ -140,7 +141,7 @@
                     </div><!-- /.cart-item-content -->
                   </li><!-- /.cart-item -->
                   <li class="cart-item">
-                    <div class="cart__item-img"><img src="assets/images/shop/thumbs/2.png" alt="thumb"></div>
+                    <div class="cart__item-img"><img src="{%static 'assets/images/shop/thumbs/2.png' %}" alt="thumb"></div>
                     <div class="cart__item-content">
                       <h6 class="cart__item-title">Roasted Steak Rou</h6>
                       <div class="cart__item-detail">$ 29.00</div>
@@ -209,7 +210,7 @@
                         <i class="fa fa-close"></i>
                       </div>
                       <div class="cart__product-img">
-                        <img src="assets/images/shop/grid/1.jpg" alt="product" />
+                        <img src="{%static 'assets/images/shop/grid/1.jpg' %}" alt="product" />
                       </div>
                       <div class="cart__product-title">
                         <h6>Roast Sea Trout</h6>
@@ -230,7 +231,7 @@
                   <tr class="cart__product ">
                     <td class="cart__product-item">
                       <div class="cart__product-img">
-                        <img src="assets/images/shop/grid/3.jpg" alt="product" />
+                        <img src="{%static 'assets/images/shop/grid/3.jpg' %}" alt="product" />
                       </div>
                       <div class="cart__product-title">
                         <h6>Roasted Steak Roulade</h6>
@@ -655,7 +656,7 @@
             <div class="row">
               <div class="col-sm-12 col-md-12 col-lg-12 position-static">
                 <div class="footer__logo-wrap text-center">
-                  <img src="assets/images/logo/footer-logo.png" alt="logo" class="footer__logo">
+                  <img src="{%static 'assets/images/logo/footer-logo.png' %}" alt="logo" class="footer__logo">
                 </div>
               </div><!-- /.col-lg-12 -->
             </div><!-- /.row -->
@@ -707,9 +708,9 @@
   </div>
   <!-- /.wrapper -->
 
-  <script src="assets/js/jquery-3.3.1.min.js"></script>
-  <script src="assets/js/plugins.js"></script>
-  <script src="assets/js/main.js"></script>
+  <script src="{%static 'assets/js/jquery-3.3.1.min.js' %}"></script>
+  <script src="{%static 'assets/js/plugins.js' %}"></script>
+  <script src="{%static 'assets/js/main.js' %}"></script>
 </body>
 
 </html>
