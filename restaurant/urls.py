@@ -4,6 +4,5 @@ from restaurant import views
 
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('', include('restaurant.urls'))
+    path('', views.index, name='home'),
 ]
