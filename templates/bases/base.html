@@ -44,17 +44,7 @@
                 <a href="{% url 'blog:home' %}" class="nav__item-link">Blog</a>
               </li><!-- /.nav-item -->
               <li class="nav__item with-dropdown">
-                <a href="#" data-toggle="dropdown" class="dropdown-toggle nav__item-link">Shop</a>
-                <ul class="dropdown-menu">
-                  <li class="nav__item"><a href="shop.html" class="nav__item-link">our Shop</a></li>
-                  <!-- /.nav-item -->
-                  <li class="nav__item"><a href="shop-sidebar.html" class="nav__item-link">Shop with Sidebar</a></li>
-                  <!-- /.nav-item -->
-                  <li class="nav__item"><a href="shop-single-product.html" class="nav__item-link">Single Product</a>
-                  </li><!-- /.nav-item -->
-                  <li class="nav__item"><a href="shopping-cart.html" class="nav__item-link">cart</a></li>
-                  <!-- /.nav-item -->
-                </ul><!-- /.dropdown-menu -->
+                <a href="{% url 'shop:home' %}" class="nav__item-link">Shop</a>
               </li><!-- /.nav-item -->
               <li class="nav__item with-dropdown">
                 <a href="{% url 'reservation' %}" class="nav__item-link active">Réservation</a>
