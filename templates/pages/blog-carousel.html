@@ -19,8 +19,8 @@
             <h1 class="pagetitle__heading">Our News</h1>
             <nav aria-label="breadcrumb">
               <ol class="breadcrumb justify-content-center">
-                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                <li class="breadcrumb-item"><a href="blog-grid.html">blog</a></li>
+                <li class="breadcrumb-item"><a href="{% url 'home' %}">Home</a></li>
+                <li class="breadcrumb-item"><a href="{% url 'blog:home' %}">blog</a></li>
                 <li class="breadcrumb-item active" aria-current="page">Carousel</li>
               </ol>
             </nav>
@@ -52,7 +52,7 @@
                       <a href="#">Business</a><a href="#">Tips</a>
                     </div><!-- /.post-meta-cat -->
                   </div><!-- /.post-meta -->
-                  <h4 class="post__title"><a href="#">Simple Recipes for Spring</a></h4>
+                  <h4 class="post__title"><a href="{% url 'blog:single' %}">Simple Recipes for Spring</a></h4>
                   <p class="post__desc">My favorite form of cold-weather exercise is snow-shoeing, but by chance I
                     haven’t
                     been able to go this year. Busy working at the computer when fresh snow fell...</p>
