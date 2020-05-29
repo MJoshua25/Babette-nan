@@ -9,5 +9,6 @@ def index(request):
 def single(request):
     return render(request, 'pages/shop/shop-single-product.html')
 
-def single(request):
+
+def cart(request):
     return render(request, 'pages/shop/shopping-cart.html')
