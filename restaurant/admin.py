@@ -1,6 +1,7 @@
 from django.contrib import admin
 from restaurant import models
 
+
 # Register your models here.
 
 class MenuCategoryAdmin(admin.ModelAdmin):
