@@ -51,15 +51,15 @@
           <div class="col-sm-12 col-md-12 col-lg-12">
             <ul class="portfolio-filter justify-content-center">
               <li><a class="filter active" href="#" data-filter="all">All</a></li>
-              <li><a class="filter" href="#" data-filter=".filter-launch">launch</a></li>
-              <li><a class="filter" href="#" data-filter=".filter-dinner">Dinner</a></li>
-              <li><a class="filter" href="#" data-filter=".filter-dessert">Dessert</a></li>
-              <li><a class="filter" href="#" data-filter=".filter-drinks">Drinks</a></li>
+                {% for categorie in categories %}
+                <li><a class="filter" href="#" data-filter=".filter-{{ categorie.titre }}">{{ categorie.titre }}</a></li>
+                {% endfor %}
             </ul><!-- /.portfolio-filter  -->
           </div><!-- /.col-lg-12 -->
         </div><!-- /.row -->
         <div class="row filtered-items-wrap">
-          <div class="col-sm-12 col-md-12 col-lg-6 mix filter-dessert">
+            {% for plat in plats %}
+            <div class="col-sm-12 col-md-12 col-lg-6 mix filter-{{ plat.categorie.titre }}">
             <div class="menu-item">
               <div class="menu__item-img">
                 <img src="{% static 'images/gallery/1.jpg' %}" alt="menu img">
@@ -75,7 +75,7 @@
               </div><!-- /.menu__item-img -->
               <div class="menu__item-content">
                 <div class="menu__item-content-inner">
-                  <h4 class="menu__item-title">Grilled American Fillet</h4>
+                  <h4 class="menu__item-title">{{ plat.titre }}</h4>
                   <div class="menu__item-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
                       <path
@@ -91,6 +91,9 @@
               </div><!-- /.menu__item-content -->
             </div><!-- /.menu-item -->
           </div><!-- /.col-lg-6 -->
+            {% endfor %}
+
+
           <div class="col-sm-12 col-md-12 col-lg-6 mix filter-drinks">
             <div class="menu-item">
               <div class="menu__item-img">
