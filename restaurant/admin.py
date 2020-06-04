@@ -7,6 +7,9 @@ from restaurant import models
 class MenuCategoryAdmin(admin.ModelAdmin):
     list_display = (
         'titre',
+        'status',
+        'date_add',
+        'date_upd',
     )
     list_filter = (
         'status',
