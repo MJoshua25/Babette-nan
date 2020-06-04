@@ -1,5 +1,5 @@
 from django.db import models
-
+import datetime
 
 # Create your models here.
 
@@ -56,6 +56,27 @@ class Plat(models.Model):
 
     def __str__(self):
         return str(self.titre)
+
+    @property
+    def getCategorieTitre(self):
+        return self.categorie.titre
+
+    @property
+    def getIngredients(self):
+        return self.ingredients.filter(status=True)
+
+    @property
+    def isNew(self):
+        return (datetime.datetime.now() - self.date_add) > datetime.timedelta(weeks=1)
+
+    @property
+    def pricingTag(self):
+        if self.isNew:
+            return 'New'
+        elif self.isRecommended:
+            return 'Recommended'
+        else:
+            return False
 
 # 1 à 1 : 1 Category < = > 1 plat
 # 1 à plusieurs : 1 Category < = > plusieurs plats
