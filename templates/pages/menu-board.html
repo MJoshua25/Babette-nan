@@ -62,9 +62,17 @@
             <div class="col-sm-12 col-md-12 col-lg-6 mix filter-{{ plat.getCategorieTitre }}">
             <div class="menu-item">
               <div class="menu__item-img">
-                <img src="{% static 'images/gallery/1.jpg' %}" alt="menu img">
+                  {% if plat.photo %}
+                      <img src="{{ plat.photo.url }}" alt="menu img">
+                  {% else %}
+                      <img src="{% static 'images/gallery/1.jpg' %}" alt="menu img">
+                  {% endif %}
                 <div class="menu__item-hover">
-                  <a href="{% static 'images/gallery/1.jpg' %}" data-lightbox="lightbox" class="zoom__icon"></a>
+                  {% if plat.photo %}
+                      <a href="{{ plat.photo.url }}" data-lightbox="lightbox" class="zoom__icon"></a>
+                  {% else %}
+                      <a href="{% static 'images/gallery/1.jpg' %}" data-lightbox="lightbox" class="zoom__icon"></a>
+                  {% endif %}
                 </div>
                 <svg class="divider-shape" xmlns="http://www.w3.org/2000/svg" width="142" height="17"
                   viewBox="0 0 142 17">
