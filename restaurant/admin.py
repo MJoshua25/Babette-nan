@@ -91,6 +91,11 @@ class PlatAdmin(admin.ModelAdmin):
                 'ingredients'
             ]
         }),
+        ('Image', {
+            'fields': [
+                'photo',
+            ]
+        }),
         ('Recommendation', {
             'fields': [
                 'isRecommended',
