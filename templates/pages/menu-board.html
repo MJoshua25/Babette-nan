@@ -85,7 +85,9 @@
                   </div>
                   <p class="menu__item-desc">{% for ingredient in plat.getIngredients %}{{ ingredient.titre }}{% if not forloop.last %}, {% else %}.{% endif %}{% endfor %}</p>
                   <span class="menu__item-price">{{ plat.prix }} Francs</span>
-                  <span class="pricing__tag">New</span>
+                {% if plat.pricingTag %}
+                  <span class="pricing__tag">{{ plat.pricingTag }}</span>
+                {% endif %}
                 </div>
               </div><!-- /.menu__item-content -->
             </div><!-- /.menu-item -->
@@ -94,7 +96,7 @@
         </div><!-- /.row  -->
         <div class="row">
           <div class="col-sm-12 col-md-12 col-lg-12 text-center">
-            <a href="reservation.html" class="btn btn__secondary btn__link mt-40">Reservations</a>
+            <a href="{% url 'reservation' %}" class="btn btn__secondary btn__link mt-40">Reservations</a>
           </div><!-- /.col-lg-12 -->
         </div><!-- /.row  -->
       </div><!-- /.container -->

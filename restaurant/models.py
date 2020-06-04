@@ -1,6 +1,6 @@
 from django.db import models
 import datetime
-
+from django.utils import timezone
 # Create your models here.
 
 
@@ -67,7 +67,7 @@ class Plat(models.Model):
 
     @property
     def isNew(self):
-        return (datetime.datetime.now() - self.date_add) > datetime.timedelta(weeks=1)
+        return (timezone.now() - self.date_add) < datetime.timedelta(weeks=1)
 
     @property
     def pricingTag(self):
