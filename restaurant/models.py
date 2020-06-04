@@ -42,6 +42,7 @@ class Ingredient(models.Model):
 class Plat(models.Model):
     titre = models.CharField(max_length=255)
     prix = models.IntegerField()
+    photo = models.ImageField(upload_to='restaurant/menu/photo', null=True, blank=True)
     categorie = models.ForeignKey('MenuCategory', on_delete=models.CASCADE, related_name='menus')
     ingredients = models.ManyToManyField('Ingredient', related_name='menus')
     isRecommended = models.BooleanField(default=False)
