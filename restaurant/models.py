@@ -30,10 +30,27 @@ class Ingredient(models.Model):
     status = models.BooleanField(default=True)
     date_add = models.DateTimeField(auto_now_add=True)
     date_upd = models.DateTimeField(auto_now=True)
-    
+
     class Meta:
         verbose_name = "Ingredient"
         verbose_name_plural = "Ingredients"
+
+    def __str__(self):
+        return str(self.titre)
+
+
+class Plat(models.Model):
+    titre = models.CharField(max_length=255)
+    prix = models.IntegerField()
+    isRecommended = models.BooleanField(default=False)
+
+    status = models.BooleanField(default=True)
+    date_add = models.DateTimeField(auto_now_add=True)
+    date_upd = models.DateTimeField(auto_now=True)
+
+    class Meta:
+        verbose_name = "Plat"
+        verbose_name_plural = "Plats"
 
     def __str__(self):
         return str(self.titre)
