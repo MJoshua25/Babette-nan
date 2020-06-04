@@ -66,8 +66,7 @@ class PlatAdmin(admin.ModelAdmin):
     list_display = (
         'titre',
         'prix',
-        'category',
-        'ingredients',
+        'categorie',
         'isRecommended',
         'status',
         'date_add',
@@ -75,6 +74,8 @@ class PlatAdmin(admin.ModelAdmin):
     )
     list_filter = (
         'status',
+        'isRecommended',
+        'ingredients'
     )
     search_fields = (
         'titre',
