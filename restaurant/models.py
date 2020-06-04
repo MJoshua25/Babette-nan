@@ -42,6 +42,8 @@ class Ingredient(models.Model):
 class Plat(models.Model):
     titre = models.CharField(max_length=255)
     prix = models.IntegerField()
+    categorie = models.ForeignKey('MenuCategory', on_delete=models.CASCADE, related_name='menus')
+    ingredients = models.ManyToManyField('Ingredient', related_name='menus')
     isRecommended = models.BooleanField(default=False)
 
     status = models.BooleanField(default=True)
@@ -54,3 +56,7 @@ class Plat(models.Model):
 
     def __str__(self):
         return str(self.titre)
+
+# 1 à 1 : 1 Category < = > 1 plat
+# 1 à plusieurs : 1 Category < = > plusieurs plats
+# plusieurs à plusieurs: plusieurs Category < = > plusieurs plats
