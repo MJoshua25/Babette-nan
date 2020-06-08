@@ -25,7 +25,7 @@ SECRET_KEY = 'vt%ox814eaonbb##4hk=jwf2ksbkdlri+*92o)c0k67&bt%0-('
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['babette-nan.herokuapp.com']
 
 
 # Application definition
@@ -81,9 +81,17 @@ WSGI_APPLICATION = 'projet.wsgi.application'
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 
 DATABASES = {
+    # 'default': {
+    #     'ENGINE': 'django.db.backends.sqlite3',
+    #     'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    # }
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'd5hq6nnruo8rd2',
+        'USER': 'vyicxfmezhzkai',
+        'PASSWORD': 'e3e0a5ee3c749b9a4306b20c0347e4daf8dd308f845d3a8425fd0f198635cccf',
+        'HOST': 'ec2-54-247-89-181.eu-west-1.compute.amazonaws.com',
+        'PORT': '5432',
     }
 }
 
